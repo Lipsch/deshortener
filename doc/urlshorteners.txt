@@ -1,0 +1,892 @@
+Shorteners which show a preview:
+-------------------------------------------
+cli.gs
+
+
+
+Untested shorteners:
+-------------------------------------------
+
+
+http://short.ie/
+http://budurl.com/
+
+
+tinyurl
+hex.io
+ewerl
+plurl
+twurl
+
+
+
+Service Name	After shortened (sample)	More Options?	Bookmarklet
+ 	A2N	http://a2n.eu/tech	
+No
+No
+ 	Beam.to	http://beam.to/hongkiat	
+No
+No
+ 	B65	http://b65.us/28x	
+Yes
+No
+ 	CanURL	http://canurl.com/s0hui	
+No
+No
+ 	Decent URL	http://hongkiat.decenturl.com/tech	
+No
+Yes
+ 	DigBig	http://digbig.com/4wxab	
+Yes
+Yes
+ 	Doiop	http://doiop.com/l3a46l	
+No
+No
+ 	Dwarfurl	http://dwarfurl.com/9ca0c	
+Yes
+Firefox
+ 	EasyURL	http://easyurl.net/55a7a	
+Yes
+No
+ 	EzURL	http://www.ezurl.eu/1	
+Yes
+No
+ 	FhURL	http://fhurl.com/b10024	
+Yes
+No
+ 	Fly2	http://fhurl.com/b10024	
+Yes
+No
+ 	Is.gd	http://is.gd/eMM	
+No
+No
+ 	X.se	http://www.x.se/xskb	
+No
+No
+ 	LiteURL	http://www.liteurl.net/a9sh	
+Yes
+No
+ 	lnk.in	http://lnk.in/5z5f	
+Yes
+Yes
+ 	Metamark	http://xrl.us/bkd33	
+Yes
+No
+ 	Minilien	http://minilien.com/?nhSqU4SkQp	
+No
+No
+ 	MooURL	http://moourl.com/woot/?moo=f9cmd	
+Yes
+Yes
+ 	MyURL	http://myurl.in/sSBTd	
+Yes
+No
+ 	NanoRef	http://nanoref.com/hongkiat/AvF62w	
+Yes
+No
+ 	Ne1	http://you.ne1.net	
+Yes
+No
+ 	Not Long	http://hongkiat.notlong.com	
+No
+No
+ 	Nutshell URL	http://nutshellurl.com/1yb	
+No
+No
+ 	Redirx	http://redirx.com/?0jxn	
+No
+No
+ 	RubyURL	http://rubyurl.com/1CO1	
+No
+Yes
+ 	Shim	http://yourname.shim.net	
+Yes
+No
+ 	Shorl	http://shorl.com/gabrafihobidra	
+Yes
+Yes
+ 	ShortenURL	http://www.shortenurl.com/6thpj	
+No
+No
+ 	Shoter Link	http://shorterlink.com/?ABC123	
+No
+No
+ 	Shortlinks	http://shortlinks.co.uk/kkx	
+No
+No
+ 	ShortURL	http://hongkiat.shorturl.com	
+Yes
+No
+ 	Short URL	http://url.lotpatrol.com/?x=892	
+No
+No
+ 	Get Shorty	http://get-shorty.com/shorty/hongkiat/	
+Yes
+No
+ 	Shrinkr	http://shrinkr.com/13	
+No
+No
+ 	ShrinkURL	http://shrinkurl.us/vDC	
+Yes
+No
+ 	SHurl	http://shurl.net/afw	
+Yes
+No
+ 	SimURL	http://simurl.com/wugses	
+No
+Yes
+ 	Sitelutions	http://ByInter.com/you	
+No
+No
+ 	SnipURL	http://snipurl.com/28bo6	
+Yes
+Yes
+ 	ShredURL	http://shredurl.com/4de	
+No
+No
+ 	Smallr	http://smallr.com/35m	
+No
+Yes
+ 	StartURL	 http://starturl.com/gsukp	
+Yes
+No
+ 	Tight URL	http://tighturl.com/7vk	
+No
+Yes
+ 	Tiny Link	http://tinylink.com/?jqdZqSlzo4	
+No
+No
+ 	TinyURL	http://tinyurl.com/6	
+No
+Yes
+ 	TraceURL	http://traceurl.com/rdS?r=1507&l=15	
+Yes
+No
+ 	Ulimit	http://hongkiat.euro.st	
+Yes
+No
+ 	URL.co.uk	http://url.co.uk/f2ktz	
+No
+No
+ 	URL Cutter	http://urlcutter.com?39024	
+Yes
+Yes
+ 	URLcut	http://urlcut.com/1pxhz	
+No
+No
+ 	URL Hawk	http://urlhawk.com/5k9	
+Yes
+No
+ 	URl.ie	http://url.ie/dkx	
+No
+No
+ 	Url Tea	http://urltea.com/367u	
+No
+Yes
+ 	U76	http://u76.org/o2	
+No
+Yes
+ 	WapURL	http://wapurl.co.uk/?CGL8HL3	
+Yes
+Yes
+ 	Xil	http://xil.in/2323/	
+Yes
+No
+ 	YATUC	http://yatuc.com/b$t	
+Yes
+Yes
+ 	Yep It	http://yep.it/l4_74e	
+Yes
+No
+ 	6URL	http://www.6URL.com/1P77	
+Yes
+No
+ 	301URL	http://301url.com/K	
+Yes
+No
+ 	URL Pie	http://www.urlpire.com/?QQATP	
+No
+No
+ 	Pi URL	http://piurl.com/5	
+No
+Yes
+ 	URLvi	http://urlvi.be/kzawc	
+Yes
+Yes
+ 	Shrtnd	http://shrtnd.com/444/	
+Yes
+No
+ 	FwdURL	http://fwdurl.net/258	
+No
+No
+ 	G8L	http://g8l.us/8uq	
+No
+No
+ 	 	 	 	 
+ 	 	 	 	 
+ 	 	 	 	 
+1	bit.ly	4,390	855,360	2	1
+
+2	tinyurl.com	547	534,600	1	-1
+
+3	is.gd	14,656	71,280	3	0
+
+4	tr.im	26,914	64,800	4	0
+
+5	ow.ly	11,823	38,357	6	1
+
+6	cli.gs	16,155	28,417	5	-1
+
+7	twurl.nl (tweetburner)		24,163	7	0
+
+8	Digg.com	183	14,522	10	2
+
+9	u.mavrev.com	733,084	12,505	14	5
+
+10	tiny.cc	31,460	11,543	11	1
+
+11	short.to	1,219,125	8,062	8	-3
+
+12	BudURL.com	50,379	7,804	12	0
+
+13	snipr.com (snipurl)	85,861	7,523	9	-4
+
+14	6url.com	629,128	4,320	125	111
+
+15	snipurl.com	9,954	4,008	13	-2
+
+16	Just.as		3,969	15	-1
+
+17	snurl.com (snipurl)	44,841	3,793	16	-1
+
+18	su.pr		2,575		NEW
+
+19	kl.am	270,058	1,823	19	0
+
+20	adjix.com	129,205	1,742	17	-3
+
+21	xrl.us (metamark.net)	28,910	1,491	18	-3
+
+22	notlong.com	30,247	1,443	41	19
+
+23	short.ie	413,769	1,265	21	-2
+
+24	sn.im (snipurl)	136,932	1,210	20	-4
+
+25	idek.net	538,706	818	25	0
+
+26	AltURL.com (shorturl)	10,566	675	26	0
+
+27	xr.com	48,872	597	24	-3
+
+28	twurl.cc	532,887	560	30	2
+
+29	Yep.it	404,893	554	27	-2
+
+30	RedirX.com		482	80	50
+
+31	to.ly	1,170,092	477	29	-2
+
+32	EasyURI.com	464,356	288	32	0
+
+33	fon.gs	210,521	256	28	-5
+
+34	Profile.to		197	34	0
+
+35	DwarfURL.com	232,415	184	45	10
+
+36	rubyurl.com	206,776	164	22	-14
+
+37	hurl.ws	1,260,352	162	33	-4
+
+38	fire.to	1,869,137	153	36	-2
+
+39	URL.ie	146,635	127	38	-1
+
+40	spedr.com	464,698	103	37	-3
+
+41	BurnURL.com	115,430	98	31	-10
+
+42	moourl.com	53,478	96	35	-7
+
+43	urlzen.com	1,073,074	90	39	-4
+
+44	nn.nf	1,296,329	77	42	-2
+
+45	doiop.com	14,356	62	55	10
+
+46	SimURL.com	44,365	61	43	-3
+
+47	PiURL.com	135,459	60	40	-7
+
+48	icanhaz.com	381,068	57	49	1
+
+49	s7y.us (shrinkify)	814,525	55	47	-2
+
+50	tiny.pl	388,255	52	51	1
+
+51	Shrinkify.com	814,525	50	50	-1
+
+52	QLNK.net	3,896,758	35	57	5
+
+53	StartURL.com	237,322	32	64	11
+
+54	url.co.uk		31	97	43
+
+55	abbrr.com	2,955,599	29	46	-9
+
+56	riz.gd		27		-56
+
+57	hurl.me	4,212,588	27	109	52
+
+58	hex.io	2,732,550	24	53	-5
+
+59	shrt.st	4,466,233	20	58	-1
+
+60	go2cut.com	718,643	18	59	-1
+
+61	sturly.com	313,519	17	69	8
+
+62	Tnij.org		16	104	42
+
+63	shw.me		14		New
+
+64	x.se	142,943	13	61	-3
+
+65	shorl.com	360,810	11	52	-13
+
+66	pnt.me	4,607,826	11	88	22
+
+67	lin.cr	431,317	11	54	-13
+
+68	yweb.com	1,917,358	11	60	-8
+
+69	shrinkster.com	615,222	10	65	-4
+
+70	poprl.com	119,088	10	23	-47
+
+71	2big.at	4,933,235	10	62	-9
+
+72	tiny123.com	2,573,619	9	115	43
+
+73	EasyURL.net	429,522	9	72	-1
+
+74	twirl.at	1,454,061	8	77	3
+
+75	urlcover.com	1,338,753	8	120	45
+
+76	beam.to		8	44	-32
+
+77	dfl8.me	1,244,681	8	100	23
+
+78	URLHawk.com	157,130	7	129	51
+
+79	zipmyurl.com	443,884	7	71	-8
+
+80	linkbun.ch	295,823	6	68	-12
+
+81	go2.me	214,145	6	87	6
+
+82	lnk.gd	1,848,101	6	75	-7
+
+83	shurl.net	1,656,750	6	111	28
+
+84	MyURL.in		5	126	42
+
+85	bloat.me	2,650,256	5	74	-11
+
+86	urlx.org	2,253,689	5	76	-10
+
+87	urlenco.de		5	73	-14
+
+88	DigBig.com	1,706,411	5	70	-18
+
+89	TightURL.com	114,928	5	67	-22
+
+90	2ya.com (shorturl)	72,963	5	93	3
+
+91	ln-s.net	1,391,497	4	105	14
+
+92	shrunkin.com	1,123,099	4	82	-10
+
+93	firsturl.de	2,074,283	4	118	25
+
+94	tinyvid.io		4		New
+
+95	EsyURL.com	486,860	4	84	-11
+
+96	nsfw.in	2,608,132	4	66	-30
+
+97	tinyarro.ws	147,096	3	63	-34
+
+98	kissa.be	465,186	2	83	-15
+
+99	XeeURL.com		2		New
+
+100	urlcut.com	168,534	2	107	7
+
+101	shorturl.com	10,554	2	79	-22
+
+102	u6e.de	1,502,656	2	122	20
+
+103	tinyuri.ca	10,037,496	2	78	-25
+
+104	WapURL.co.uk		2	136	32
+
+105	tweetburner.com	102,345	2	90	-15
+
+106	1link.in	123,026	2	94	-12
+
+107	Hurl.it		1	86	-21
+
+108	krunchd.com	3,096,490	1	96	-12
+
+109	w3t.org	397,196	1	91	-18
+
+110	TubeURL.com		1	123	13
+
+111	xaddr.com	1,195,967	1	124	13
+
+112	dy.fi		1		New
+
+113	eweri.com	7,376,857	1	85	-28
+
+114	urlot.com	8,203,906	1	99	-15
+
+115	ru.ly	10,187,646	1	117	2
+
+116	minilien.com	509,039	1	98	-18
+
+117	lnk.in	100,327	1	116	-1
+
+118	turo.us		1	140	22
+
+119	TraceURL.com		1	103	-16
+
+120	sharetabs.com	880,987	1	106	-14
+
+121	Fly2.ws	29,782	1	102	-19
+
+122	zi.ma	60,702	1	92	-30
+
+123	ClickMeter.com	169,130	1	113	-10
+
+124	DecentURL.com	592,148	0	127	
+
+125	sqrl.it (iterasi.net)	169,749	0	137	
+
+126	WebAlias.com		0	195	
+
+127	Fhurl.com		0	95	
+
+128	C-O.IN		0	114	
+
+129	plurl.me	974,499	0	48	
+
+130	shmyl.com		0	56	
+
+131	lookleap.com	3,377,565	0	81	
+
+132	ilix.in	342,047	0	89	
+
+133	CanURL.com		0	101	
+
+134	FaceTo.us		0	108	
+
+135	ne1.net		0	110	
+
+136	makeitbrief.com	5,788,037	0	112	
+
+137	memurl.com	1,348,694	0	119	
+
+138	EZurl.eu		0	121	
+
+139	urlBorg.com	441,860	0	128	
+
+140	TiniURI.com		0	130	
+
+141	weturl.com	1,896,763	0	131	
+
+142	ElfURL.com	716,683	0	132	
+
+143	shrink2one.com	110,370	0	133	
+
+144	yiyd.com		0	134	
+
+145	23o.net	5,253,939	0	135	
+
+146	YATUC.com	372,936	0	138	
+
+147	NutShellURL.com		0	139	
+
+148	4url.cc	1,687,357	0	141	
+
+149	shorturl.de	1,148,113	0	142	
+
+150	notifyurl.com	3,842,116	0	143	
+
+151	fexr.com	254,351	0	144	
+
+152	makeashorterlink.com	679,039	0	145	
+
+153	qicute.com	727,297	0	146	
+
+154	301url.com	1,709,683	0	147	
+
+155	shorterlink.co.uk	1,785,503	0	148	
+
+156	ShortLinks.co.uk	2,104,494	0	149	
+
+157	thnlnk.com	3,132,432	0	150	
+
+158	link.toolbot.com	4,087,008	0	151	
+
+159	parv.us	5,150,742	0	152	
+
+160	url360.me	6,325,731	0	153	
+
+161	smarturl.eu	7,521,329	0	154	
+
+162	muhlink.org	8,454,596	0	155	
+
+163	hosturl.com	9,105,550	0	156	
+
+164	voomr.com	12,271,428	0	157	
+
+165	url9.com	12,482,040	0	158	
+
+166	plumurl.com	12,730,544	0	159	
+
+167	ix.lt	17,685,933	0	160	
+
+168	a2n.eu		0	161	
+
+169	AZQQ.com		0	162	
+
+170	b65.us		0	163	
+
+171	CutURLs.com		0	164	
+
+172	durl.us		0	165	
+
+173	Flingk.com		0	166	
+
+174	Get-URL.com		0	167	
+
+175	HotRedirect.com		0	168	
+
+176	IsCool.net (Jaze)		0	169	
+
+177	jmp2.net		0	170	
+
+178	LinkSlice.com		0	171	
+
+179	LiteURL.net		0	172	
+
+180	NanoRef.com		0	173	
+
+181	NetShortcut.com		0	174	
+
+182	oboeyasui.com		0	175	
+
+183	Paulding.net		0	176	
+
+184	QuickURL.co.uk		0	177	
+
+185	Shim.net		0	178	
+
+186	ShortenURL.com		0	179	
+
+187	ShorterLink.com		0	180	
+
+188	Shortio.com		0	181	
+
+189	Shrinkr.com		0	182	
+
+190	ShrinkURL.us		0	183	
+
+191	Sitelutions.com		0	184	
+
+192	TruncURL.com		0	185	
+
+193	tweetl.com		0	186	
+
+194	TwittU.ms		0	187	
+
+195	u76.org		0	188	
+
+196	ULimit.com		0	189	
+
+197	urlao.com		0	190	
+
+198	URLBee.com		0	191	
+
+199	URLCutter.com		0	192	
+
+200	urlTea.com		0	193	
+
+201	VDirect.com		0	194	
+
+202	Xil.in		0	196	
+
+203	GoWat.ch		1		
+
+204	shrten.com		0		
+
+205	safe.mn		3		
+
+206	twitterpan.com		1		
+
+207	minurl.fr		322		
+
+208	Quip-Art.com		2		
+
+209	ZootIt.com		0	197	
+
+210	om.ly		2,100		
+
+211	quip-art.com		2		
+
+212	kindurl.com		0		
+
+213	decenturl.com		0		
+
+214	u.nu				
+
+215	pd.am
+
+
+
+
+
+
+bit.ly
+tinyurl.com
+is.gd
+cli.gs
+pic.gd    tweetphoto
+DwarfURL.com
+ow.ly
+yfrog.com
+migre.me
+ff.im
+tiny.cc
+url4.eu
+tr.im
+twit.ac
+su.pr
+twurl.nl
+snipurl.com
+BudURL.com
+short.to
+ping.fm
+Digg.com
+post.ly
+Just.as
+.tk
+bkite.com
+snipr.com
+flic.kr
+loopt.us
+doiop.com
+twitthis.com
+htxt.it
+AltURL.com
+RedirX.com
+DigBig.com
+short.ie
+u.mavrev.com
+kl.am
+wp.me
+u.nu
+rubyurl.com
+om.ly
+linkbee.com
+Yep.it
+posted.at
+xrl.us
+metamark.net
+sn.im
+hurl.ws
+eepurl.com
+idek.net
+urlpire.com
+chilp.it
+moourl.com
+snurl.com
+xr.com
+lin.cr
+EasyURI.com
+zz.gd
+ur1.ca
+URL.ie
+adjix.com
+twurl.cc
+s7y.us    shrinkify
+EasyURL.net
+atu.ca
+sp2.ro
+Profile.to
+ub0.cc
+minurl.fr
+cort.as
+fire.to
+2tu.us
+twiturl.de
+to.ly
+BurnURL.com
+nn.nf
+clck.ru
+notlong.com
+thrdl.es
+spedr.com
+vl.am
+miniurl.com
+virl.com
+PiURL.com
+1url.com
+gri.ms
+tr.my
+Sharein.com
+urlzen.com
+fon.gs
+Shrinkify.com
+ri.ms
+b23.ru
+Fly2.ws
+xrl.in
+Fhurl.com
+wipi.es
+korta.nu
+shortna.me
+fa.b
+WapURL.co.uk
+urlcut.com
+6url.com
+abbrr.com
+SimURL.com
+klck.me
+x.se
+2big.at
+url.co.uk
+ewerl.com
+inreply.to
+TightURL.com
+a.gg
+tinytw.it
+zi.pe
+riz.gd
+hex.io
+fwd4.me
+bacn.me
+shrt.st
+ln-s.ru
+tiny.pl
+o-x.fr
+StartURL.com
+jijr.com
+shorl.com
+icanhaz.com
+updating.me
+kissa.be
+hellotxt.com
+pnt.me
+nsfw.in
+xurl.jp
+yweb.com
+urlkiss.com
+QLNK.net
+w3t.org
+lt.tl
+twirl.at
+zipmyurl.com
+urlot.com
+a.nf
+hurl.me
+URLHawk.com
+Tnij.org
+4url.cc
+firsturl.de
+Hurl.it
+sturly.com
+shrinkster.com
+ln-s.net
+go2cut.com
+liip.to
+shw.me
+XeeURL.com
+liltext.com
+lnk.gd
+xzb.cc
+linkbun.ch
+href.in
+urlbrief.com
+2ya.com
+safe.mn
+shrunkin.com
+bloat.me
+krunchd.com
+minilien.com
+ShortLinks.co.uk
+qicute.com
+rb6.me
+urlx.ie
+pd.am
+go2.me
+tinyarro.ws
+tinyvid.io
+lurl.no
+ru.ly
+lru.jp
+rickroll.it
+togoto.us
+ClickMeter.com
+hugeurl.com
+tinyuri.ca
+shrten.com
+shorturl.com
+Quip-Art.com
+urlao.com
+a2a.me
+tcrn.ch
+goshrink.com
+DecentURL.com
+decenturl.com
+zi.ma
+1link.in
+sharetabs.com
+shoturl.us
+fff.to
+hover.com
+lnk.in
+jmp2.net
+dy.fi
+urlcover.com
+2pl.us
+tweetburner.com
+u6e.de
+xaddr.com
+gl.am
+dfl8.me
+go.9nl.com
+gurl.es
+C-O.IN
+TraceURL.com
+liurl.cn
+MyURL.in
+urlenco.de
+ne1.net
+buk.me
+rsmonkey.com
+cuturl.com
+turo.us
+sqrl.it
+iterasi.net
+tiny123.com
+EsyURL.com
+urlx.org
+IsCool.net
+twitterpan.com
+GoWat.ch
+poprl.com
+njx.me

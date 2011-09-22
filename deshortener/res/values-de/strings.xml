@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<string name="shortenedUrl">Gekürzte URL:</string>
+	<string name="deshortenedUrl">Original URL:</string>
+	<string name="goBack">Zurück</string>
+	<string name="openUrl">Öffne URL</string>
+	<string name="openErrorUrl">Öffne %s im Browser</string>
+	<string name="app_info">Diese Anwendung wird gestartet werden, wenn andere Anwendungen eine gekürzte URL im Browser öffnen möchten.</string>
+	<string name="trustDomain">Vertraue der Domain %s</string>
+	<string name="trustUrl">Vertraue der URL %s</string>
+	<string name="toastMsgOpenTrusted">Öffne die vertrauenswürdige URL %s</string>
+	<string name="clearTrust">Lösche alle vertauenswürdigen Domains und URLs</string>
+	<string name="trustedCleared">Alle vertrauenswürdigen Domains und URLs wurden gelöscht.</string>
+	<string name="deshorten">Löse original URL auf</string>
+	<string name="error">FEHLER</string>
+</resources>

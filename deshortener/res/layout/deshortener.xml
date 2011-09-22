@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:orientation="vertical" android:layout_width="fill_parent"
+	android:layout_height="fill_parent">
+	<TextView android:textAppearance="?android:attr/textAppearanceMedium"
+		android:layout_height="wrap_content" android:text="@string/shortenedUrl"
+		android:layout_width="wrap_content" android:id="@+id/shortenedUrlLabel"
+		android:layout_marginLeft="5dp" android:layout_marginTop="5dp" />
+	<TextView android:text="" android:id="@+id/shortenedUrl"
+		android:layout_width="wrap_content" android:layout_height="wrap_content"
+		android:layout_below="@id/shortenedUrlLabel"
+		android:layout_marginLeft="5dp" />
+	<TextView android:textAppearance="?android:attr/textAppearanceMedium"
+		android:layout_height="wrap_content" android:text="@string/deshortenedUrl"
+		android:layout_width="wrap_content" android:id="@+id/deshortenedUrlLabel"
+		android:layout_below="@id/shortenedUrl" android:layout_marginLeft="5dp" android:layout_marginTop="5dp" />
+	<TextView android:text="" android:id="@+id/deshortenedUrl"
+		android:layout_width="wrap_content" android:layout_height="wrap_content"
+		android:layout_below="@id/deshortenedUrlLabel"
+		android:layout_marginLeft="5dp" />
+	<ProgressBar android:id="@+id/deshortenProgress"
+		android:visibility="invisible" android:layout_width="wrap_content"
+		android:layout_height="wrap_content" style="?android:attr/progressBarStyleSmall"
+		android:layout_toRightOf="@+id/deshortenedUrl" android:layout_below="@id/deshortenedUrlLabel"
+		android:layout_marginLeft="10dp"></ProgressBar>
+	<Button android:layout_width="wrap_content" android:visibility="invisible"
+		android:layout_height="wrap_content" android:text="@string/openUrl"
+		android:id="@+id/openUrlButton" android:layout_below="@+id/deshortenedUrl"
+		android:layout_marginTop="10dp" android:layout_marginLeft="10dp" />
+	<CheckBox android:layout_width="wrap_content"
+		android:layout_height="wrap_content" android:visibility="invisible"
+		android:id="@+id/trustUrl" android:text="@string/trustUrl"
+		android:layout_below="@+id/openUrlButton" android:layout_marginLeft="5dp" android:layout_marginTop="20dp" />
+	<CheckBox android:layout_width="wrap_content"
+		android:layout_height="wrap_content" android:visibility="invisible"
+		android:id="@+id/trustDomain" android:text="@string/trustDomain"
+		android:layout_below="@+id/trustUrl" android:layout_marginLeft="5dp" />
+	<Button android:layout_width="wrap_content" android:visibility="invisible"
+		android:layout_height="wrap_content" android:text="@string/openErrorUrl"
+		android:id="@+id/openUrlOnErrorButton" android:layout_below="@+id/deshortenedUrl"
+		android:layout_marginTop="10dp" android:layout_marginLeft="10dp" />
+</RelativeLayout>

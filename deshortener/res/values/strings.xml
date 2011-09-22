@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<string name="app_name">Deshortener</string>
+	<string name="shortenedUrl">Shortened URL:</string>
+	<string name="deshortenedUrl">Deshortened URL:</string>
+	<string name="goBack">Go back</string>
+	<string name="openUrl">Open URL</string>
+	<string name="openErrorUrl">Open %s in browser</string>
+	<string name="app_info">This application will be started when another application opens a shortened url in the browser.</string>
+	<string name="trustDomain">Trust domain %s</string>
+	<string name="trustUrl">Trust %s URL</string>
+	<string name="toastMsgOpenTrusted">Opened trusted URL %s</string>
+	<string name="clearTrust">Clear trusted domains and URLs</string>
+	<string name="trustedCleared">Trusted domains and URLs were cleared</string>
+	<string name="deshorten">Deshorten</string>
+	<string name="error">ERROR</string>
+</resources>

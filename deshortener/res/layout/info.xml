@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="fill_parent" android:layout_height="fill_parent">
+	<TextView android:layout_width="fill_parent"
+		android:layout_height="wrap_content" android:text="@string/app_info"
+		android:id="@+id/infoText" android:layout_margin="10dp" />
+	<Button android:text="@string/clearTrust" android:id="@+id/clrTrusted"
+		android:layout_width="wrap_content" android:layout_height="wrap_content"
+		android:layout_below="@id/infoText" android:layout_marginTop="15dp"
+		android:layout_marginLeft="5dp" android:layout_marginRight="5dp" />
+	<TextView android:text="@string/shortenedUrl" android:id="@+id/shortenedUrlText"
+		android:layout_width="wrap_content" android:layout_height="wrap_content"
+		android:layout_below="@id/clrTrusted" android:layout_marginTop="10dp"
+		android:layout_marginLeft="5dp" />
+	<EditText android:id="@+id/shortenedUrl" android:layout_below="@id/shortenedUrlText"
+		android:layout_width="fill_parent" android:layout_height="wrap_content"
+		android:singleLine="true" android:text="http://"
+		android:layout_marginLeft="15dp" android:layout_marginRight="15dp" />
+	<Button android:id="@+id/deshortenButton" android:layout_width="wrap_content"
+		android:layout_height="wrap_content" android:text="@string/deshorten"
+		android:layout_below="@id/shortenedUrl" android:enabled="false"
+		android:layout_marginLeft="5dp" android:layout_marginTop="5dp" />
+</RelativeLayout>
