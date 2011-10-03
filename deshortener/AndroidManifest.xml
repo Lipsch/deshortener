@@ -24,6 +24,7 @@
 				<data android:scheme="http" android:host="snipurl.com" />
 				<data android:scheme="http" android:host="snurl.com" />
 				<data android:scheme="http" android:host="t.co" />
+				<data android:scheme="http" android:host="tinyurl.com" />
 			</intent-filter>
 		</activity>
 	</application>

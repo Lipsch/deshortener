@@ -60,4 +60,11 @@ public class DeshortenerTests extends AndroidTestCase {
 				Deshortener.deshorten(Uri.parse("http://t.co/Viub5y8"))
 						.toString());
 	}
+
+	public void testTinyUrlCom() {
+		assertEquals("http://www.google.com",
+				Deshortener.deshorten(Uri.parse("http://tinyurl.com/1c2"))
+						.toString());
+	}
+
 }

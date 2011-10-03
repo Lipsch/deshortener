@@ -2,17 +2,17 @@ Shorteners which show a preview:
 -------------------------------------------
 cli.gs
 
+Shorteners which didn't work:
+-------------------------------------------
+http://short.ie/
+
 
 
 Untested shorteners:
 -------------------------------------------
+	
 
 
-http://short.ie/
-http://budurl.com/
-
-
-tinyurl
 hex.io
 ewerl
 plurl
@@ -890,3 +890,7 @@ twitterpan.com
 GoWat.ch
 poprl.com
 njx.me
+
+
+
+http://budurl.com/
