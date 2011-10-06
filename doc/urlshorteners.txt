@@ -5,18 +5,18 @@ cli.gs
 Shorteners which didn't work:
 -------------------------------------------
 http://short.ie/
-
+hex.io -> redirects to bitly.com
+ewerl
 
 
 Untested shorteners:
 -------------------------------------------
 	
 
+--> twurl
 
-hex.io
-ewerl
-plurl
-twurl
+
+
 
 
 

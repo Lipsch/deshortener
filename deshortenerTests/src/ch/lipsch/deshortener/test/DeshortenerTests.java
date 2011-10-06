@@ -43,6 +43,12 @@ public class DeshortenerTests extends AndroidTestCase {
 						.toString());
 	}
 
+	public void testPlurlCom() {
+		assertEquals("http://www.google.com",
+				Deshortener.deshorten(Uri.parse("http://plurl.us/2t"))
+						.toString());
+	}
+
 	public void testSnipurlCom() {
 		assertEquals("http://www.google.com",
 				Deshortener.deshorten(Uri.parse("http://snipurl.com/uxg1p"))
