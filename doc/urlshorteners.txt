@@ -1,68 +1,35 @@
 Shorteners which show a preview:
 -------------------------------------------
 cli.gs
+beam.to
 
 Shorteners which didn't work:
 -------------------------------------------
 http://short.ie/
 hex.io -> redirects to bitly.com
 ewerl
+B65	http://b65.us/28x -> no info found	
+
+
+Check later:
+-------------------------------------------
+twurl
+http://a2n.eu/tech: is for sale...
+
 
 
 Untested shorteners:
 -------------------------------------------
-	
-
---> twurl
-
-
-
-
-
-
-Service Name	After shortened (sample)	More Options?	Bookmarklet
- 	A2N	http://a2n.eu/tech	
-No
-No
- 	Beam.to	http://beam.to/hongkiat	
-No
-No
- 	B65	http://b65.us/28x	
-Yes
-No
- 	CanURL	http://canurl.com/s0hui	
-No
-No
  	Decent URL	http://hongkiat.decenturl.com/tech	
-No
-Yes
  	DigBig	http://digbig.com/4wxab	
-Yes
-Yes
  	Doiop	http://doiop.com/l3a46l	
-No
-No
  	Dwarfurl	http://dwarfurl.com/9ca0c	
-Yes
-Firefox
  	EasyURL	http://easyurl.net/55a7a	
-Yes
-No
  	EzURL	http://www.ezurl.eu/1	
-Yes
-No
  	FhURL	http://fhurl.com/b10024	
-Yes
-No
  	Fly2	http://fhurl.com/b10024	
-Yes
-No
  	Is.gd	http://is.gd/eMM	
-No
-No
  	X.se	http://www.x.se/xskb	
-No
-No
  	LiteURL	http://www.liteurl.net/a9sh	
 Yes
 No

@@ -31,6 +31,12 @@ public class DeshortenerTests extends AndroidTestCase {
 						.toString());
 	}
 
+	public void testCanUrlCom() {
+		assertEquals("http://canurl.com",
+				Deshortener.deshorten(Uri.parse("http://canurl.com/s0hui"))
+						.toString());
+	}
+
 	public void testGooGl() {
 		assertEquals("http://www.google.com/",
 				Deshortener.deshorten(Uri.parse("http://goo.gl/fbsS"))
