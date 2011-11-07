@@ -1,0 +1,6 @@
+launcher icon size:
+
+ldpi:	36x36	(120dpi)
+mdpi:	48x48	(160dpi)
+hdpi:	72x72	(240dpi)
+xhdpi:	96x96	(320dpi)
