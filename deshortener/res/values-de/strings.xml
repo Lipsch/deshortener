@@ -13,4 +13,11 @@
 	<string name="trustedCleared">Alle vertrauenswürdigen Domains und URLs wurden gelöscht.</string>
 	<string name="deshorten">Löse original URL auf</string>
 	<string name="error">FEHLER</string>
+	<string name="homepage">Homepage</string>
+	<string name="info">Info</string>
+	<string name="license">
+	    \nDie Veröffentlichung dieses Dokuments erfolgt in der Hoffnung, daß es Ihnen von Nutzen sein wird, aber ohne irgendeine Garantie, sogar ohne die implizite Garantie der MARKTREIFE oder der VERWENDBARKEIT FÜR EINEN BESTIMMTEN ZWECK. Details finden Sie in der GNU General Public License.\n
+	</string>
+	<string name="infoDialogTitle">Info:</string>
+	<string name="infoDialogCloseButton">Schliessen</string>
 </resources>

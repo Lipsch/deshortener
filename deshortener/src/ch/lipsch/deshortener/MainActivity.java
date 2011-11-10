@@ -22,11 +22,17 @@ import java.net.MalformedURLException;
 import java.net.URL;
 
 import android.app.Activity;
+import android.app.AlertDialog;
+import android.app.Dialog;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
 import android.text.Editable;
 import android.text.TextWatcher;
+import android.view.LayoutInflater;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
@@ -34,7 +40,9 @@ import android.widget.EditText;
 import android.widget.Toast;
 import ch.lipsch.deshortener.persistence.DbAdapter;
 
-public class InfoActivity extends Activity {
+public class MainActivity extends Activity {
+
+	private static final int INFO_DIALOG = 0;
 
 	private Button clearTrustedButton = null;
 	private DbAdapter dbAdapter = null;
@@ -48,9 +56,62 @@ public class InfoActivity extends Activity {
 	}
 
 	@Override
+	public boolean onCreateOptionsMenu(Menu menu) {
+		MenuInflater inflater = getMenuInflater();
+		inflater.inflate(R.menu.menu, menu);
+		return true;
+	}
+
+	@Override
+	public boolean onOptionsItemSelected(MenuItem item) {
+		switch (item.getItemId()) {
+		case R.id.homepageMenu:
+			openHomepage();
+			return true;
+		case R.id.infoMenu:
+			showDialog(INFO_DIALOG);
+			return true;
+		default:
+			return super.onOptionsItemSelected(item);
+		}
+	}
+
+	@Override
+	protected Dialog onCreateDialog(int id) {
+		Dialog dialog = null;
+
+		if (id == INFO_DIALOG) {
+			dialog = createInfoDialog();
+		}
+
+		return dialog;
+	}
+
+	private Dialog createInfoDialog() {
+		AlertDialog.Builder dialogBuilder = new AlertDialog.Builder(this);
+
+		dialogBuilder.setTitle(getString(R.string.infoDialogTitle));
+		dialogBuilder.setNegativeButton(
+				getString(R.string.infoDialogCloseButton), null);
+
+		View view = LayoutInflater.from(this)
+				.inflate(R.layout.infodialog, null);
+
+		dialogBuilder.setView(view);
+
+		return dialogBuilder.create();
+	}
+
+	private void openHomepage() {
+		Intent intent = new Intent(Intent.ACTION_VIEW);
+		intent.setData(Uri.parse("http://www.google.ch"));
+		startActivity(intent);
+	}
+
+	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		setContentView(R.layout.info);
+		setContentView(R.layout.main);
 
 		clearTrustedButton = (Button) findViewById(R.id.clrTrusted);
 		deshortenButton = (Button) findViewById(R.id.deshortenButton);
@@ -94,8 +155,8 @@ public class InfoActivity extends Activity {
 			public void onClick(View v) {
 				dbAdapter.removeAllDomains();
 				dbAdapter.removeAllUris();
-				Toast toast = Toast.makeText(InfoActivity.this,
-						InfoActivity.this.getText(R.string.trustedCleared),
+				Toast toast = Toast.makeText(MainActivity.this,
+						MainActivity.this.getText(R.string.trustedCleared),
 						Toast.LENGTH_SHORT);
 				toast.show();
 			}
@@ -105,7 +166,7 @@ public class InfoActivity extends Activity {
 
 			public void onClick(View v) {
 				Intent intent = new Intent();
-				intent.setClass(InfoActivity.this, DeshortenerActivity.class);
+				intent.setClass(MainActivity.this, DeshortenerActivity.class);
 				intent.setData(Uri.parse(shortendedUrlEditText.getText()
 						.toString()));
 				startActivity(intent);

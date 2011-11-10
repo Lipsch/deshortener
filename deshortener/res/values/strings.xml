@@ -14,4 +14,11 @@
 	<string name="trustedCleared">Trusted domains and URLs were cleared</string>
 	<string name="deshorten">Deshorten</string>
 	<string name="error">ERROR</string>
+	<string name="homepage">Homepage</string>
+	<string name="info">Info</string>
+	<string name="license">
+		\nThis is distributed in the hope that it will be useful, but without any warranty; without even the implied warranty of merchantability or fitness for a particular purpose. See the GNU General Public License for more details.\n
+	</string>
+	<string name="infoDialogTitle">Info:</string>
+	<string name="infoDialogCloseButton">Close</string>
 </resources>
