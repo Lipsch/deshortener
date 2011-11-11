@@ -16,7 +16,7 @@
 	<string name="homepage">Homepage</string>
 	<string name="info">Info</string>
 	<string name="license">
-	    \nDie Veröffentlichung dieses Dokuments erfolgt in der Hoffnung, daß es Ihnen von Nutzen sein wird, aber ohne irgendeine Garantie, sogar ohne die implizite Garantie der MARKTREIFE oder der VERWENDBARKEIT FÜR EINEN BESTIMMTEN ZWECK. Details finden Sie in der GNU General Public License.\n
+	    \nDie Veröffentlichung dieser Applikation erfolgt in der Hoffnung, daß sie Ihnen von Nutzen sein wird, aber ohne irgendeine Garantie, sogar ohne die implizite Garantie der MARKTREIFE oder der VERWENDBARKEIT FÜR EINEN BESTIMMTEN ZWECK. Details finden Sie in der GNU General Public License.\n
 	</string>
 	<string name="infoDialogTitle">Info:</string>
 	<string name="infoDialogCloseButton">Schliessen</string>
