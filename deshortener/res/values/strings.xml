@@ -21,4 +21,5 @@
 	</string>
 	<string name="infoDialogTitle">Info:</string>
 	<string name="infoDialogCloseButton">Close</string>
+	<item type="string" name="homepageUrl" format="string">https://code.google.com/p/deshortener</item>
 </resources>

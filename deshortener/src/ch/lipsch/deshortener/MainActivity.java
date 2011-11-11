@@ -104,7 +104,8 @@ public class MainActivity extends Activity {
 
 	private void openHomepage() {
 		Intent intent = new Intent(Intent.ACTION_VIEW);
-		intent.setData(Uri.parse("http://www.google.ch"));
+		Uri homepageUri = Uri.parse(getString(R.string.homepageUrl));
+		intent.setData(homepageUri);
 		startActivity(intent);
 	}
 
