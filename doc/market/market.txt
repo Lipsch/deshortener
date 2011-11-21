@@ -1,16 +1,3 @@
-TODO:
-
-Screenshots
---------------------
-- 320x480, 480x800,480x854,1280x720,1280x800
-- PNG / JPEG mit 24bit (kein Alpha)
-
-
-Icons
---------------------
-- Hochauflösendes Symbol für App (512x512 32Bit max size: 1024 kb)
-
-
 Details
 -------------------
 
@@ -34,12 +21,9 @@ Deutsch:
 Description:
 Haben Sie sich auch schon gefragt, welche URL hinter http://goo.gl/fbsS steht? Diese Applikation zeigt Ihnen, dass diese URL auf http://www.google.com zeigt und ermöglicht Ihnen zu entscheiden ob es sicher ist diese gekürzte URL zu öffnen.
 
-Werden gekürzte URLs im Browser geöffnet, kann die Deshortener Applikation diese nicht abfangen. Gekürzte URLs müssen von externen Applikationen geöffnet werden, damit sie abgefangen und aufgelöst werden können.
-
-Die Deshortener Applikation kann nur zu gekürzte URLs abfangen, die von anderen Applikationen geöffnet werden, nicht aber URLs die im Browser geöffnet werden.
+Die Deshortener Applikation kann nur gekürzte URLs abfangen, die von anderen Applikationen geöffnet werden, nicht aber URLs die im Browser direkt geöffnet werden.
 
 Promo Text:
-Der Deshortener zeigt Ihnen was hinter gekürzten URL steht.
 
 
 Kontaktinformation:
