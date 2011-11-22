@@ -5,7 +5,7 @@
 	<string name="goBack">Zurück</string>
 	<string name="openUrl">Öffne URL</string>
 	<string name="openErrorUrl">Öffne %s im Browser</string>
-	<string name="app_info">Diese Anwendung wird gestartet werden, wenn andere Anwendungen eine gekürzte URL im Browser öffnen möchten.</string>
+	<string name="app_info">Diese Anwendung wird gestartet, wenn andere Anwendungen eine gekürzte URL im Browser öffnen.</string>
 	<string name="trustDomain">Vertraue der Domain %s</string>
 	<string name="trustUrl">Vertraue der URL %s</string>
 	<string name="toastMsgOpenTrusted">Öffne die vertrauenswürdige URL %s</string>
