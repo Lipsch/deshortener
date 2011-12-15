@@ -36,6 +36,11 @@ public class DeshortenerTests extends AndroidTestCase {
 				Deshortener.deshorten(Uri.parse("http://canurl.com/s0hui"))
 						.toString());
 	}
+	
+	public void testFbMe(){
+		assertEquals("http://www.publikative.org/2011/12/06/npd-anhanger-verlieren-die-nerven/",
+				Deshortener.deshorten(Uri.parse("http://fb.me/1nodCMsN3")).toString());
+	}
 
 	public void testGooGl() {
 		assertEquals("http://www.google.com/",
