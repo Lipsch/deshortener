@@ -1,18 +1,18 @@
 /*
  * Copyright (C) 2011 Erwin Betschart
- * 
+ *
  * This file is part of Deshortener.
- * 
+ *
  * This program is free software; you can redistribute it and/or modify it under
  * the terms of the GNU General Public License as published by the Free Software
  * Foundation; either version 3 of the License, or (at your option) any later
  * version.
- * 
+ *
  * This program is distributed in the hope that it will be useful, but WITHOUT
  * ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS
  * FOR A PARTICULAR PURPOSE. See the GNU General Public License for more
  * details.
- * 
+ *
  * You should have received a copy of the GNU General Public License along with
  * this program; If not, see <http://www.gnu.org/licenses/>.
  */
@@ -36,10 +36,12 @@ public class DeshortenerTests extends AndroidTestCase {
 				Deshortener.deshorten(Uri.parse("http://canurl.com/s0hui"))
 						.toString());
 	}
-	
-	public void testFbMe(){
-		assertEquals("http://www.publikative.org/2011/12/06/npd-anhanger-verlieren-die-nerven/",
-				Deshortener.deshorten(Uri.parse("http://fb.me/1nodCMsN3")).toString());
+
+	public void testFbMe() {
+		assertEquals(
+				"http://www.publikative.org/2011/12/06/npd-anhanger-verlieren-die-nerven/",
+				Deshortener.deshorten(Uri.parse("http://fb.me/1nodCMsN3"))
+						.toString());
 	}
 
 	public void testGooGl() {
@@ -51,6 +53,13 @@ public class DeshortenerTests extends AndroidTestCase {
 	public void testIdGd() {
 		assertEquals("http://www.google.com",
 				Deshortener.deshorten(Uri.parse("http://is.gd/gbKNRq"))
+						.toString());
+	}
+
+	public void testOwLy() {
+		assertEquals(
+				"http://blog.flattr.net/2011/12/the-top-foss-projects-in-2011/",
+				Deshortener.deshorten(Uri.parse("http://ow.ly/8e5i5"))
 						.toString());
 	}
 
