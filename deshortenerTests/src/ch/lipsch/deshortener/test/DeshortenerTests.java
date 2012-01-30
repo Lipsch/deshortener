@@ -93,4 +93,9 @@ public class DeshortenerTests extends AndroidTestCase {
 						.toString());
 	}
 
+	public void testUr1Ca() {
+		assertEquals("http://hackspace-jena.de/wiki/",
+				Deshortener.deshorten(Uri.parse("http://ur1.ca/7xguz"))
+						.toString());
+	}
 }
