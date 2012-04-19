@@ -65,3 +65,8 @@
 /deshortenerTests/bin/classes/ch/lipsch/deshortener/test/R$layout.class
 /deshortenerTests/bin/classes/ch/lipsch/deshortener/test/R$string.class
 /doc/market/market.txt~
+/deshortenerTests/bin/res/drawable-mdpi/icon.png
+/deshortenerTests/bin/res/drawable-ldpi/icon.png
+/deshortenerTests/bin/res/drawable-hdpi/icon.png
+/deshortenerTests/bin/classes/ch/lipsch/deshortener/persistence/DbAdapterTests.class
+/deshortener/gen/ch/lipsch/deshortener/BuildConfig.java

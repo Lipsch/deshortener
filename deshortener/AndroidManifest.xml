@@ -13,6 +13,8 @@
 			</intent-filter>
 		</activity>
 
+		<activity android:name=".Preferences" android:label="Prefernces" />
+		
 		<activity android:name=".DeshortenerActivity" android:label="@string/app_name">
 			<intent-filter>
 				<action android:name="android.intent.action.VIEW" />
@@ -31,5 +33,11 @@
 				<data android:scheme="http" android:host="tinyurl.com" />
 			</intent-filter>
 		</activity>
+		<service 
+		    android:name=".gsb.GoogleSafeBrowsingService" 
+		    android:exported="true" 
+		    android:enabled="true" 
+		    android:permission="android.permission.INTERNET">
+		</service>
 	</application>
 </manifest>

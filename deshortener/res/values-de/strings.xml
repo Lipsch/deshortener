@@ -20,4 +20,6 @@
 	</string>
 	<string name="infoDialogTitle">Info:</string>
 	<string name="infoDialogCloseButton">Schliessen</string>
+	<string name="preferences">Eigenschaften</string>
+	<string name="useGsbPrefsSummary">Gekürzte URLs werden mit Google Safe Browsing überprüft</string>
 </resources>
