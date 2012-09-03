@@ -21,81 +21,107 @@ package ch.lipsch.deshortener.test;
 import android.net.Uri;
 import android.test.AndroidTestCase;
 import ch.lipsch.deshortener.Deshortener;
+import ch.lipsch.deshortener.Deshortener.Result;
+import ch.lipsch.deshortener.Deshortener.ResultType;
 
 public class DeshortenerTests extends AndroidTestCase {
 
 	public void testBitLy() {
+
+		Result result = Deshortener.deshorten(Uri.parse("http://bit.ly/CUjV"));
+		assertTrue(result.wasSuccessful());
 		assertEquals(
 				"http://maps.google.com/maps?f=d&saddr=New+York+Penn+Station&daddr=9th+Ave+%26+14th+St,+New+York,+NY&hl=en&geocode=&mra=ls&dirflg=r&date=11%2F12%2F08&time=4:13pm&ttype=dep&noexp=0&noal=0&sort=&sll=40.746175,-73.998395&sspn=0.014468,0.036392&ie=UTF8&z=14",
-				Deshortener.deshorten(Uri.parse("http://bit.ly/CUjV"))
-						.toString());
+				result.getDeshortenedUri().toString());
 	}
 
 	public void testCanUrlCom() {
-		assertEquals("http://canurl.com",
-				Deshortener.deshorten(Uri.parse("http://canurl.com/s0hui"))
-						.toString());
+		Result result = Deshortener.deshorten(Uri
+				.parse("http://canurl.com/s0hui"));
+		assertTrue(result.wasSuccessful());
+		assertEquals("http://canurl.com", result.getDeshortenedUri().toString());
 	}
 
 	public void testFbMe() {
+		Result result = Deshortener.deshorten(Uri
+				.parse("http://fb.me/1nodCMsN3"));
+		assertTrue(result.wasSuccessful());
 		assertEquals(
 				"http://www.publikative.org/2011/12/06/npd-anhanger-verlieren-die-nerven/",
-				Deshortener.deshorten(Uri.parse("http://fb.me/1nodCMsN3"))
-						.toString());
+				result.getDeshortenedUri().toString());
 	}
 
 	public void testGooGl() {
-		assertEquals("http://www.google.com/",
-				Deshortener.deshorten(Uri.parse("http://goo.gl/fbsS"))
-						.toString());
+		Result result = Deshortener.deshorten(Uri.parse("http://goo.gl/fbsS"));
+		assertTrue(result.wasSuccessful());
+		assertEquals("http://www.google.com/", result.getDeshortenedUri()
+				.toString());
 	}
 
 	public void testIdGd() {
-		assertEquals("http://www.google.com",
-				Deshortener.deshorten(Uri.parse("http://is.gd/gbKNRq"))
-						.toString());
+		Result result = Deshortener.deshorten(Uri.parse("http://is.gd/gbKNRq"));
+		assertTrue(result.wasSuccessful());
+		assertEquals("http://www.google.com", result.getDeshortenedUri()
+				.toString());
 	}
 
 	public void testOwLy() {
+		Result result = Deshortener.deshorten(Uri.parse("http://ow.ly/8e5i5"));
+		assertTrue(result.wasSuccessful());
 		assertEquals(
 				"http://blog.flattr.net/2011/12/the-top-foss-projects-in-2011/",
-				Deshortener.deshorten(Uri.parse("http://ow.ly/8e5i5"))
-						.toString());
+				result.getDeshortenedUri().toString());
 	}
 
 	public void testPlurlCom() {
-		assertEquals("http://www.google.com",
-				Deshortener.deshorten(Uri.parse("http://plurl.us/2t"))
-						.toString());
+		Result result = Deshortener.deshorten(Uri.parse("http://plurl.us/2t"));
+		assertTrue(result.wasSuccessful());
+		assertEquals("http://www.google.com", result.getDeshortenedUri()
+				.toString());
 	}
 
 	public void testSnipurlCom() {
-		assertEquals("http://www.google.com",
-				Deshortener.deshorten(Uri.parse("http://snipurl.com/uxg1p"))
-						.toString());
+		Result result = Deshortener.deshorten(Uri
+				.parse("http://snipurl.com/uxg1p"));
+		assertTrue(result.wasSuccessful());
+		assertEquals("http://www.google.com", result.getDeshortenedUri()
+				.toString());
 	}
 
 	public void testSnurlCom() {
-		assertEquals("http://www.google.com",
-				Deshortener.deshorten(Uri.parse("http://snurl.com/uxg1p"))
-						.toString());
+		Result result = Deshortener.deshorten(Uri
+				.parse("http://snurl.com/uxg1p"));
+		assertTrue(result.wasSuccessful());
+		assertEquals("http://www.google.com", result.getDeshortenedUri()
+				.toString());
 	}
 
 	public void testTCo() {
-		assertEquals("http://goo.gl/Sj4XW",
-				Deshortener.deshorten(Uri.parse("http://t.co/Viub5y8"))
-						.toString());
+		Result result = Deshortener.deshorten(Uri.parse("http://t.co/Viub5y8"));
+		assertTrue(result.wasSuccessful());
+		assertEquals("http://goo.gl/Sj4XW", result.getDeshortenedUri()
+				.toString());
 	}
 
 	public void testTinyUrlCom() {
-		assertEquals("http://www.google.com",
-				Deshortener.deshorten(Uri.parse("http://tinyurl.com/1c2"))
-						.toString());
+		Result result = Deshortener.deshorten(Uri
+				.parse("http://tinyurl.com/1c2"));
+		assertTrue(result.wasSuccessful());
+		assertEquals("http://www.google.com", result.getDeshortenedUri()
+				.toString());
 	}
 
 	public void testUr1Ca() {
-		assertEquals("http://hackspace-jena.de/wiki/",
-				Deshortener.deshorten(Uri.parse("http://ur1.ca/7xguz"))
-						.toString());
+		Result result = Deshortener.deshorten(Uri.parse("http://ur1.ca/7xguz"));
+		assertTrue(result.wasSuccessful());
+		assertEquals("http://hackspace-jena.de/wiki/", result
+				.getDeshortenedUri().toString());
 	}
+
+	public void testCliGs() {
+		Result result = Deshortener.deshorten(Uri
+				.parse("http://cli.gs/6fwxm69"));
+		assertEquals(ResultType.SHOWS_PREVIEW, result.getResultType());
+	}
+
 }

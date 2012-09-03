@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-	package="ch.lipsch.deshortener" android:versionCode="4"
-	android:versionName="1.0.4">
+	package="ch.lipsch.deshortener" android:versionCode="5"
+	android:versionName="1.0.5">
 	<uses-sdk android:minSdkVersion="4" />
 	<uses-permission android:name="android.permission.INTERNET"></uses-permission>
 
@@ -20,6 +20,7 @@
 				<category android:name="android.intent.category.BROWSABLE" />
 				<data android:scheme="http" android:host="bit.ly" />
 				<data android:scheme="http" android:host="canurl.com" />
+				<data android:scheme="http" android:host="cli.gs" />
 				<data android:scheme="http" android:host="fb.me" />
 				<data android:scheme="http" android:host="goo.gl" />
 				<data android:scheme="http" android:host="is.gd" />

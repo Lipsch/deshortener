@@ -1,18 +1,18 @@
 /*
  * Copyright (C) 2011 Erwin Betschart
- * 
+ *
  * This file is part of Deshortener.
- * 
+ *
  * This program is free software; you can redistribute it and/or modify it under
  * the terms of the GNU General Public License as published by the Free Software
  * Foundation; either version 3 of the License, or (at your option) any later
  * version.
- * 
+ *
  * This program is distributed in the hope that it will be useful, but WITHOUT
  * ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS
  * FOR A PARTICULAR PURPOSE. See the GNU General Public License for more
  * details.
- * 
+ *
  * You should have received a copy of the GNU General Public License along with
  * this program; If not, see <http://www.gnu.org/licenses/>.
  */
@@ -30,9 +30,9 @@ import android.util.Log;
 /**
  * This class provides an easy access to the deshortener database. This class is
  * thread-safe.
- * 
+ *
  * TODO: Synchronization could be done tighter.
- * 
+ *
  * @author Erwin Betschart
  */
 public final class DbAdapter {
@@ -83,7 +83,7 @@ public final class DbAdapter {
 
 	/**
 	 * Adds a new domain to the trusted domains.
-	 * 
+	 *
 	 * @param domain
 	 *            The domain to trust. Provide just the hostname. E.g. goo.gl
 	 * @return The row id of the newly created database entry or -1 in case of
@@ -110,7 +110,7 @@ public final class DbAdapter {
 
 	/**
 	 * Removes the provided domain from the trusted domains.
-	 * 
+	 *
 	 * @param url
 	 *            The url to remove.
 	 * @return True if the url was removed else false.
@@ -133,7 +133,7 @@ public final class DbAdapter {
 
 	/**
 	 * Removes all trusted domains.
-	 * 
+	 *
 	 * @throws IllegalStateException
 	 *             In case {@link #open()} was never called.
 	 */
@@ -147,7 +147,7 @@ public final class DbAdapter {
 
 	/**
 	 * Adds a new uri to the trusted uris.
-	 * 
+	 *
 	 * @param uri
 	 *            The uri to trust.
 	 * @return The row id of the newly created database entry or -1 in case of
@@ -172,7 +172,7 @@ public final class DbAdapter {
 
 	/**
 	 * Removes the provided uri from the trusted uris.
-	 * 
+	 *
 	 * @param uri
 	 *            The uri to remove.
 	 * @return True if the uri was removed else false.
@@ -194,7 +194,7 @@ public final class DbAdapter {
 
 	/**
 	 * Removes all trusted uris.
-	 * 
+	 *
 	 * @throws IllegalStateException
 	 *             In case {@link #open()} was never called.
 	 */
@@ -208,7 +208,7 @@ public final class DbAdapter {
 
 	/**
 	 * Checks if the provided domain is trusted.
-	 * 
+	 *
 	 * @param domain
 	 *            The domain (host) to check.
 	 * @return true if the domain is trusted.
@@ -224,21 +224,26 @@ public final class DbAdapter {
 		if (!isOpened) {
 			throw new IllegalStateException("DbAdapter must be opened");
 		}
-		Cursor cursor = database.query(DOMAIN_TABLE,
-				new String[] { DOMAIN_KEY }, DOMAIN_KEY + "='" + domain + "'",
-				null, null, null, null);
 
-		boolean isTrusted = cursor.getCount() > 0;
+		Cursor cursor = null;
+		try {
+			cursor = database.query(DOMAIN_TABLE, new String[] { DOMAIN_KEY },
+					DOMAIN_KEY + "='" + domain + "'", null, null, null, null);
 
-		Log.d(LOG_TAG, MessageFormat.format("Trust check for domain {0}: {1}",
-				domain, isTrusted));
+			boolean isTrusted = cursor.getCount() > 0;
 
-		return isTrusted;
+			Log.d(LOG_TAG, MessageFormat.format(
+					"Trust check for domain {0}: {1}", domain, isTrusted));
+
+			return isTrusted;
+		} finally {
+			cursor.close();
+		}
 	}
 
 	/**
 	 * Checks if the provided uri is trusted.
-	 * 
+	 *
 	 * @param uri
 	 *            The uri to check.
 	 * @return true if the uri is trusted.
@@ -254,14 +259,21 @@ public final class DbAdapter {
 		if (!isOpened) {
 			throw new IllegalStateException("DbAdapter must be opened");
 		}
-		Cursor cursor = database.query(URI_TABLE, new String[] { URI_KEY },
-				URI_KEY + "='" + uri.toString() + "'", null, null, null, null);
 
-		boolean isTrusted = cursor.getCount() > 0;
-		Log.d(LOG_TAG, MessageFormat.format("Trust check for uri {0}: {1}",
-				uri, isTrusted));
+		Cursor cursor = null;
+		try {
+			cursor = database.query(URI_TABLE, new String[] { URI_KEY },
+					URI_KEY + "='" + uri.toString() + "'", null, null, null,
+					null);
 
-		return isTrusted;
+			boolean isTrusted = cursor.getCount() > 0;
+			Log.d(LOG_TAG, MessageFormat.format("Trust check for uri {0}: {1}",
+					uri, isTrusted));
+
+			return isTrusted;
+		} finally {
+			cursor.close();
+		}
 	}
 
 	private ContentValues createSingleContentValues(String row, String data) {

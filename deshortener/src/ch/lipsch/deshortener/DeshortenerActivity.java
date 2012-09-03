@@ -1,18 +1,18 @@
 /*
  * Copyright (C) 2011 Erwin Betschart
- * 
+ *
  * This file is part of Deshortener.
- * 
+ *
  * This program is free software; you can redistribute it and/or modify it under
  * the terms of the GNU General Public License as published by the Free Software
  * Foundation; either version 3 of the License, or (at your option) any later
  * version.
- * 
+ *
  * This program is distributed in the hope that it will be useful, but WITHOUT
  * ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS
  * FOR A PARTICULAR PURPOSE. See the GNU General Public License for more
  * details.
- * 
+ *
  * You should have received a copy of the GNU General Public License along with
  * this program; If not, see <http://www.gnu.org/licenses/>.
  */
@@ -30,17 +30,20 @@ import android.widget.CheckBox;
 import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
+import ch.lipsch.deshortener.Deshortener.Result;
+import ch.lipsch.deshortener.Deshortener.ResultType;
 import ch.lipsch.deshortener.persistence.DbAdapter;
 
 /**
  * This activity is shown for certain shorten domains (defined in
  * AndroidManifest.xml). The activity will try to deshorten the uri given in the
- * starting intent.
+ * starting intent. TODO make multiple activities or rename fields properly.
  */
 public final class DeshortenerActivity extends Activity {
 
 	private TextView shortenedUrlTextView = null;
 	private TextView deshortenedUrlTextView = null;
+	private TextView deshortenedUrlLabel = null;
 	private Button openUrlButton = null;
 	private ProgressBar progressBar = null;
 	private Button openErrorUrlButton = null;
@@ -57,10 +60,16 @@ public final class DeshortenerActivity extends Activity {
 
 	private void onCreateTrusted() {
 		openUrlButton.setOnClickListener(new OnClickListener() {
-
 			public void onClick(View v) {
-				openBrowser(Uri.parse(deshortenedUrlTextView.getText()
-						.toString()));
+				Uri uriToOpen = null;
+				if (shouldOpenUnshortenedUrl()) {
+					uriToOpen = Uri.parse(shortenedUrlTextView.getText()
+							.toString());
+				} else {
+					uriToOpen = Uri.parse(deshortenedUrlTextView.getText()
+							.toString());
+				}
+				openBrowser(uriToOpen);
 			}
 		});
 
@@ -97,6 +106,14 @@ public final class DeshortenerActivity extends Activity {
 		});
 	}
 
+	private boolean shouldOpenUnshortenedUrl() {
+		if (deshortenedUrlTextView.getText().equals(
+				getString(R.string.showsPreview))) {
+			return true;
+		}
+		return false;
+	}
+
 	private void onCreateUntrusted() {
 		// Nothing to do yet.
 	}
@@ -112,6 +129,7 @@ public final class DeshortenerActivity extends Activity {
 		setContentView(R.layout.deshortener);
 		shortenedUrlTextView = (TextView) findViewById(R.id.shortenedUrl);
 		deshortenedUrlTextView = (TextView) findViewById(R.id.deshortenedUrl);
+		deshortenedUrlLabel = (TextView) findViewById(R.id.deshortenedUrlLabel);
 		openUrlButton = (Button) findViewById(R.id.openUrlButton);
 		openErrorUrlButton = (Button) findViewById(R.id.openUrlOnErrorButton);
 		progressBar = (ProgressBar) findViewById(R.id.deshortenProgress);
@@ -135,7 +153,8 @@ public final class DeshortenerActivity extends Activity {
 				|| dbAdapter.isUriTrusted(intent.getData());
 	}
 
-	private void switchWidgetsToStateDeshortened(boolean isTrusted) {
+	private void switchWidgetsToStateDeshortened(boolean isTrusted,
+			boolean showsPreview) {
 		if (isTrusted) {
 			openUrlButton.setVisibility(View.INVISIBLE);
 			trustDomainChkBox.setVisibility(View.INVISIBLE);
@@ -147,9 +166,16 @@ public final class DeshortenerActivity extends Activity {
 		}
 		openErrorUrlButton.setVisibility(View.INVISIBLE);
 		progressBar.setVisibility(View.INVISIBLE);
+
+		if (showsPreview) {
+			deshortenedUrlLabel.setVisibility(View.INVISIBLE);
+		} else {
+			deshortenedUrlLabel.setVisibility(View.VISIBLE);
+		}
 	}
 
 	private void switchWidgetsToStateError() {
+		deshortenedUrlLabel.setVisibility(View.VISIBLE);
 		openUrlButton.setVisibility(View.INVISIBLE);
 		openErrorUrlButton.setText(getString(R.string.openErrorUrl,
 				shortenedUrlTextView.getText()));
@@ -159,7 +185,7 @@ public final class DeshortenerActivity extends Activity {
 		trustUrlChkBox.setVisibility(View.INVISIBLE);
 	}
 
-	private class UnshortenUrlTask extends AsyncTask<Uri, Void, Uri> {
+	private class UnshortenUrlTask extends AsyncTask<Uri, Void, Result> {
 
 		private boolean isUriTrusted = false;
 		private Uri unshortenedUri = null;
@@ -171,39 +197,60 @@ public final class DeshortenerActivity extends Activity {
 		}
 
 		@Override
-		protected Uri doInBackground(Uri... params) {
+		protected Result doInBackground(Uri... params) {
 			unshortenedUri = params[0];
 			isUriTrusted = isIntentTrusted(startIntent);
 			return Deshortener.deshorten(unshortenedUri);
 		}
 
 		@Override
-		protected void onPostExecute(Uri result) {
-			if (result != null) {
-				deshortenedUrlTextView.setText(result.toString());
-				if (isUriTrusted) {
-					openBrowser(result);
-					Toast toast = Toast.makeText(
-							getBaseContext(),
-							getString(R.string.toastMsgOpenTrusted,
-									unshortenedUri), Toast.LENGTH_SHORT);
-					toast.show();
-				} else {
-					trustDomainChkBox
-							.setText(getString(
-									R.string.trustDomain,
-									Uri.parse(
-											shortenedUrlTextView.getText()
-													.toString()).getHost()));
-					trustUrlChkBox.setText(getString(R.string.trustUrl, Uri
-							.parse(shortenedUrlTextView.getText().toString())));
-				}
-				switchWidgetsToStateDeshortened(isUriTrusted);
+		protected void onPostExecute(Result result) {
+			if (result.wasSuccessful()) {
+				presentSaveToView(result.getDeshortenedUri(), isUriTrusted,
+						false);
 			} else {
-				deshortenedUrlTextView.setText(getText(R.string.error));
-				switchWidgetsToStateError();
+				if (result.getResultType().equals(ResultType.SHOWS_PREVIEW)) {
+					presentSaveToView(unshortenedUri, isUriTrusted, true);
+				} else {
+					presentError(result.getResultType().equals(
+							ResultType.NETWORK_ERROR));
+				}
 			}
 		}
+	}
+
+	private void presentError(boolean wasNetworkError) {
+		if (wasNetworkError) {
+			getText(R.string.networkError);
+		} else {
+			getText(R.string.unableToDeshorten);
+		}
+		switchWidgetsToStateError();
+	}
+
+	private void presentSaveToView(Uri uri, boolean isUriTrusted,
+			boolean isPreviewed) {
+		if (isPreviewed) {
+			deshortenedUrlTextView.setText(R.string.showsPreview);
+		} else {
+			deshortenedUrlTextView.setText(uri.toString());
+		}
+		if (isUriTrusted) {
+			openBrowser(uri);
+			Toast toast = Toast.makeText(getBaseContext(),
+					getString(R.string.toastMsgOpenTrusted, uri),
+					Toast.LENGTH_SHORT);
+			toast.show();
+		} else {
+			trustDomainChkBox
+					.setText(getString(
+							R.string.trustDomain,
+							Uri.parse(shortenedUrlTextView.getText().toString())
+									.getHost()));
+			trustUrlChkBox.setText(getString(R.string.trustUrl,
+					Uri.parse(shortenedUrlTextView.getText().toString())));
+		}
+		switchWidgetsToStateDeshortened(isUriTrusted, isPreviewed);
 	}
 
 	private void openBrowser(Uri uri) {

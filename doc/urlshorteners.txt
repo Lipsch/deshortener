@@ -1,6 +1,5 @@
 Shorteners which show a preview:
 -------------------------------------------
-cli.gs
 beam.to
 
 Shorteners which didn't work:
