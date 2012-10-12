@@ -13,13 +13,17 @@ Have you ever asked yourself what's behind http://goo.gl/fbsS? This application 
 The following URL shorteners are supported:
 - bit.ly
 - canurl.com
+- cli.gs
+- fb.me
 - goo.gl
 - is.gd
+- ow.ly
 - plurl.us
 - snipurl.com
 - snurl.com
 - t.co
 - tinyurl.com
+- ur1.ca
 
 The Deshortener can only intercept applications which open a shortened URL. Links opened from within a browser will not be intercepted.
 
@@ -33,19 +37,25 @@ Deutsch:
 Description:
 Diese Applikation zeigt die ursprüngliche URL einer gekürzten URL.
 
+
 Haben Sie sich auch schon gefragt, welche URL hinter http://goo.gl/fbsS steht? Diese Applikation zeigt Ihnen, dass diese URL auf http://www.google.com zeigt und ermöglicht Ihnen zu entscheiden ob es sicher ist diese gekürzte URL zu öffnen.
 Folgende Kurz-URL-Dienste (URL shorteners) werden unterstützt:
 - bit.ly
 - canurl.com
+- cli.gs
+- fb.me
 - goo.gl
 - is.gd
+- ow.ly
 - plurl.us
 - snipurl.com
 - snurl.com
 - t.co
 - tinyurl.com
+- ur1.ca
 
 Die Deshortener Applikation kann nur gekürzte URLs abfangen, die von anderen Applikationen geöffnet werden, nicht aber URLs die im Browser direkt geöffnet werden.
+
 
 Promo Text:
 
