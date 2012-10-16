@@ -220,11 +220,13 @@ public final class DeshortenerActivity extends Activity {
 	}
 
 	private void presentError(boolean wasNetworkError) {
+		CharSequence errorMsg = null;
 		if (wasNetworkError) {
-			getText(R.string.networkError);
+			errorMsg = getText(R.string.networkError);
 		} else {
-			getText(R.string.unableToDeshorten);
+			errorMsg = getText(R.string.unableToDeshorten);
 		}
+		deshortenedUrlTextView.setText(errorMsg);
 		switchWidgetsToStateError();
 	}
 
