@@ -177,5 +177,8 @@ public class MainActivity extends Activity {
 				startActivity(intent);
 			}
 		});
+
+		shortendedUrlEditText.requestFocus();
+
 	}
 }
