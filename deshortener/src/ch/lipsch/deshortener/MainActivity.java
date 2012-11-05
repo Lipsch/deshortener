@@ -18,8 +18,8 @@
  */
 package ch.lipsch.deshortener;
 
-import java.net.MalformedURLException;
-import java.net.URL;
+import java.net.URI;
+import java.net.URISyntaxException;
 
 import android.app.Activity;
 import android.app.AlertDialog;
@@ -140,16 +140,16 @@ public class MainActivity extends Activity {
 
 			public void afterTextChanged(Editable s) {
 				try {
-					URL url = new URL(shortendedUrlEditText.getText()
+					URI uri = new URI(shortendedUrlEditText.getText()
 							.toString());
-					boolean hasHost = url.getHost() != null
-							&& (!url.getHost().equals(""));
+					boolean hasHost = uri.getHost() != null
+							&& (!uri.getHost().equals(""));
 					if (hasHost) {
 						deshortenButton.setEnabled(true);
 					} else {
 						deshortenButton.setEnabled(false);
 					}
-				} catch (MalformedURLException e) {
+				} catch (URISyntaxException e) {
 					deshortenButton.setEnabled(false);
 				}
 			}
@@ -179,6 +179,5 @@ public class MainActivity extends Activity {
 		});
 
 		shortendedUrlEditText.requestFocus();
-
 	}
 }

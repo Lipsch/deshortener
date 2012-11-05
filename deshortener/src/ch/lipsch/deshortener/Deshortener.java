@@ -59,12 +59,14 @@ public final class Deshortener {
 
 	/**
 	 * Deshortens the provided uri.
-	 *
+	 * 
 	 * @param uriToDeshorten
 	 *            The uri to deshorten.
 	 * @return Returns the result of the deshorten process. The result is only
 	 *         successful when the given uri returns an 30x. Then value of the
 	 *         Location header is returned within the result.
+	 * @throws IllegalArgumentException
+	 *             If the provided uri is invalid.
 	 */
 	public static Result deshorten(Uri uriToDeshorten) {
 		// Checks if the url shortener shows a preview
