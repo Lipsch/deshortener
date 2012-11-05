@@ -132,4 +132,11 @@ public class DeshortenerTests extends AndroidTestCase {
 		assertEquals(ResultType.SHOWS_PREVIEW, result.getResultType());
 	}
 
+	public void testZiteTo() {
+		Result result = Deshortener.deshorten(Uri
+				.parse("http://zite.to/UbJZ3R"));
+		assertEquals("http://www.evanmiller.org/why-i-program-in-erlang.html",
+				result.getDeshortenedUri().toString());
+	}
+
 }

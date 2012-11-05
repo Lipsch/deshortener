@@ -32,6 +32,7 @@
 				<data android:scheme="http" android:host="t.co" />
 				<data android:scheme="http" android:host="tinyurl.com" />
 				<data android:scheme="http" android:host="ur1.ca" />
+				<data android:scheme="http" android:host="zite.to" />
 			</intent-filter>
 		</activity>
 	</application>
