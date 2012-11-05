@@ -51,6 +51,14 @@ public class DeshortenerTests extends AndroidTestCase {
 				result.getDeshortenedUri().toString());
 	}
 
+	public void testFlpbdIts() {
+		Result result = Deshortener.deshorten(Uri
+				.parse("http://flpbd.it/rzru5"));
+		assertTrue(result.wasSuccessful());
+		assertEquals("http://t.co/r8XgrM8Z", result.getDeshortenedUri()
+				.toString());
+	}
+
 	public void testGooGl() {
 		Result result = Deshortener.deshorten(Uri.parse("http://goo.gl/fbsS"));
 		assertTrue(result.wasSuccessful());
