@@ -42,6 +42,12 @@ public class DeshortenerTests extends AndroidTestCase {
 		assertEquals("http://canurl.com", result.getDeshortenedUri().toString());
 	}
 
+	public void testCliGs() {
+		Result result = Deshortener.deshorten(Uri
+				.parse("http://cli.gs/6fwxm69"));
+		assertEquals(ResultType.SHOWS_PREVIEW, result.getResultType());
+	}
+
 	public void testFbMe() {
 		Result result = Deshortener.deshorten(Uri
 				.parse("http://fb.me/1nodCMsN3"));
@@ -119,17 +125,19 @@ public class DeshortenerTests extends AndroidTestCase {
 				.toString());
 	}
 
+	public void testTnwCo() {
+		Result result = Deshortener
+				.deshorten(Uri.parse("http://tnw.co/VIHUDt"));
+		assertEquals(
+				"http://thenextweb.com/google/2012/10/25/googles-new-samsung-made-nexus-10-confirmed-in-user-guide-leak/",
+				result.getDeshortenedUri().toString());
+	}
+
 	public void testUr1Ca() {
 		Result result = Deshortener.deshorten(Uri.parse("http://ur1.ca/7xguz"));
 		assertTrue(result.wasSuccessful());
 		assertEquals("http://hackspace-jena.de/wiki/", result
 				.getDeshortenedUri().toString());
-	}
-
-	public void testCliGs() {
-		Result result = Deshortener.deshorten(Uri
-				.parse("http://cli.gs/6fwxm69"));
-		assertEquals(ResultType.SHOWS_PREVIEW, result.getResultType());
 	}
 
 	public void testZiteTo() {
@@ -138,5 +146,4 @@ public class DeshortenerTests extends AndroidTestCase {
 		assertEquals("http://www.evanmiller.org/why-i-program-in-erlang.html",
 				result.getDeshortenedUri().toString());
 	}
-
 }
