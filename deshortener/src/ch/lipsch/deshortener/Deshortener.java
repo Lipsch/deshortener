@@ -59,7 +59,7 @@ public final class Deshortener {
 
 	/**
 	 * Deshortens the provided uri.
-	 * 
+	 *
 	 * @param uriToDeshorten
 	 *            The uri to deshorten.
 	 * @return Returns the result of the deshorten process. The result is only
@@ -194,6 +194,17 @@ public final class Deshortener {
 								+ ResultType.SUCCESS);
 			}
 			return uri;
+		}
+
+		@Override
+		public String toString() {
+			StringBuilder stringRep = new StringBuilder("Deshortened result: [");
+			stringRep.append(resultType.toString()).append("]");
+			if (wasSuccessful()) {
+				stringRep.append("; URL: ").append(
+						getDeshortenedUri().toString());
+			}
+			return stringRep.toString();
 		}
 	}
 }

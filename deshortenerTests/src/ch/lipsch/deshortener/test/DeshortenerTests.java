@@ -48,6 +48,15 @@ public class DeshortenerTests extends AndroidTestCase {
 		assertEquals(ResultType.SHOWS_PREVIEW, result.getResultType());
 	}
 
+	public void testDbTt() {
+		Result result = Deshortener.deshorten(Uri
+				.parse("http://db.tt/mfX2UmuI"));
+		assertTrue(result.wasSuccessful());
+		assertEquals(
+				"https://www.dropbox.com/s/yt48r247pzg929b/CWM-S3-Dbox.zip",
+				result.getDeshortenedUri().toString());
+	}
+
 	public void testFbMe() {
 		Result result = Deshortener.deshorten(Uri
 				.parse("http://fb.me/1nodCMsN3"));
@@ -70,6 +79,15 @@ public class DeshortenerTests extends AndroidTestCase {
 		assertTrue(result.wasSuccessful());
 		assertEquals("http://www.google.com/", result.getDeshortenedUri()
 				.toString());
+	}
+
+	public void testGrinTo() {
+		Result result = Deshortener
+				.deshorten(Uri.parse("http://grin.to/K7NSZ"));
+		assertTrue(result.wasSuccessful());
+		assertEquals(
+				"http://www.faz.net/aktuell/feuilleton/aus-dem-maschinenraum/der-glaeserne-leser-wer-liest-der-wird-gelesen-11968518.html",
+				result.getDeshortenedUri().toString());
 	}
 
 	public void testIdGd() {
@@ -138,6 +156,14 @@ public class DeshortenerTests extends AndroidTestCase {
 		assertTrue(result.wasSuccessful());
 		assertEquals("http://hackspace-jena.de/wiki/", result
 				.getDeshortenedUri().toString());
+	}
+
+	public void testWpMe() {
+		Result result = Deshortener.deshorten(Uri
+				.parse("http://wp.me/pXEnA-c9Y"));
+		assertTrue(result.wasSuccessful());
+		assertEquals("http://www.kraftfuttermischwerk.de/blogg/?p=46746",
+				result.getDeshortenedUri().toString());
 	}
 
 	public void testZiteTo() {
