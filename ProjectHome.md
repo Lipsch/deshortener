@@ -1,0 +1,1 @@
+Intercepts shortened URLs like goo.gl and presents the user the original (deshortened) url.
